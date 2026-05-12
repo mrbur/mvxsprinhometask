@@ -1,7 +1,7 @@
 package org.example.mvxsprinhometask.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.mvxsprinhometask.dto.User;
+import org.example.mvxsprinhometask.entity.User;
 
 import org.example.mvxsprinhometask.repository.UserRepository;
 import org.example.mvxsprinhometask.servise.UserService;
@@ -41,6 +41,7 @@ public class UserControllerTest {
     //создаём юзера -> проверяем что создался -> получаем юзера -> удаляем юзера -> проверяем что удалили
     public void createGetRemoveSuccessUser() throws Exception {
         User inputUser = new User("new user", "user@mail.com");
+        inputUser.setAddress("address");
 
         long countBefore = userRepository.count();
 
