@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.time.Instant;
+import java.util.NoSuchElementException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(IllegalArgumentException.class)
+    @ExceptionHandler({IllegalArgumentException.class, NoSuchElementException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ProblemDetail handleNotFound(IllegalArgumentException ex) {
         ProblemDetail problem = ProblemDetail.forStatusAndDetail(

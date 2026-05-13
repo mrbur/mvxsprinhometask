@@ -1,7 +1,7 @@
 package org.example.mvxsprinhometask.servise;
 
 import jakarta.transaction.Transactional;
-import org.example.mvxsprinhometask.dto.User;
+import org.example.mvxsprinhometask.entity.User;
 import org.example.mvxsprinhometask.repository.UserRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

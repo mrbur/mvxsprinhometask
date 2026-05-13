@@ -1,9 +1,9 @@
 package org.example.mvxsprinhometask.repository;
 
-import org.example.mvxsprinhometask.entity.User;
+import org.example.mvxsprinhometask.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 }
